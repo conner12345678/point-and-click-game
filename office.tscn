@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2jnfanosm1im"]
+
+[ext_resource type="Texture2D" uid="uid://b27hf1ga5w3yq" path="res://images/detectives-office.png.png" id="1_v25im"]
+
+[node name="office" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 323)
+scale = Vector2(0.225977, 0.125781)
+texture = ExtResource("1_v25im")
