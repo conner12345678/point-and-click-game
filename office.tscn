@@ -1,10 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2jnfanosm1im"]
+[gd_scene load_steps=4 format=3 uid="uid://b2jnfanosm1im"]
 
-[ext_resource type="Texture2D" uid="uid://b27hf1ga5w3yq" path="res://images/detectives-office.png.png" id="1_v25im"]
+[ext_resource type="Script" path="res://office.gd" id="1_eujqf"]
+[ext_resource type="Texture2D" uid="uid://b27hf1ga5w3yq" path="res://images/detectives-office.png" id="2_607e6"]
+[ext_resource type="Texture2D" uid="uid://cyergqn7wi78" path="res://images/back-arrow.png" id="2_ltsga"]
 
 [node name="office" type="Node2D"]
+script = ExtResource("1_eujqf")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576.5, 323)
-scale = Vector2(0.225977, 0.125781)
-texture = ExtResource("1_v25im")
+[node name="officeImage" type="Sprite2D" parent="."]
+position = Vector2(578, 311)
+scale = Vector2(0.225586, 0.125781)
+texture = ExtResource("2_607e6")
+
+[node name="Back-arrow" type="Sprite2D" parent="."]
+position = Vector2(73, 352)
+scale = Vector2(0.455556, 0.371111)
+texture = ExtResource("2_ltsga")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt58ar4tueos3"]
+
+[ext_resource type="Script" path="res://street.gd" id="1_cg1gn"]
+[ext_resource type="Texture2D" uid="uid://bfhfr2e3io5hh" path="res://images/street.png" id="1_u0hpc"]
+[ext_resource type="Texture2D" uid="uid://bsi860fk26623" path="res://images/car.png" id="2_55fvn"]
+
+[node name="street" type="Node2D"]
+script = ExtResource("1_cg1gn")
+
+[node name="streetImage" type="Sprite2D" parent="."]
+position = Vector2(577.5, 325)
+scale = Vector2(0.225195, 0.126172)
+texture = ExtResource("1_u0hpc")
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(633, 271)
+scale = Vector2(0.36, 0.329)
+texture = ExtResource("2_55fvn")
