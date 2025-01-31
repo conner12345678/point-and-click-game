@@ -10,20 +10,24 @@ func _ready():
 func _process(delta):
 	if !handle_click($"StartButton"):
 		$StartButton.modulate.a = 0
+		$TitleScreen/Start.text = "[color=white]Start[/color]"
 	elif handle_click($"StartButton"):
-		$StartButton.modulate.a = 0.3
+		$TitleScreen/Start.text = "[color=red]Start[/color]"
 	if !handle_click($"LoadButton"):
 		$LoadButton.modulate.a = 0
+		$TitleScreen/Load.text = "[color=white]Load[/color]"
 	elif handle_click($"LoadButton"):
-		$LoadButton.modulate.a = 0.3
+		$TitleScreen/Load.text = "[color=red]Load[/color]"
 	if !handle_click($"CredditsButton"):
 		$CredditsButton.modulate.a = 0
+		$TitleScreen/Credits.text = "[color=white]Credits[/color]"
 	elif handle_click($"CredditsButton"):
-		$CredditsButton.modulate.a = 0.3
+		$TitleScreen/Credits.text = "[color=red]Credits[/color]"
 	if !handle_click($"SettingsButton"):
 		$SettingsButton.modulate.a = 0
+		$TitleScreen/Settings.text = "[color=white]Settings[/color]"
 	elif handle_click($"SettingsButton"):
-		$SettingsButton.modulate.a = 0.3
+		$TitleScreen/Settings.text = "[color=red]Settings[/color]"
 	if Input.is_action_just_pressed("select"):
 		if handle_click($"StartButton"):
 			get_tree().change_scene_to_file("res://office.tscn")
