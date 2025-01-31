@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwaqylem3cu1f"]
+
+[ext_resource type="Texture2D" uid="uid://c62efwo1c7eya" path="res://images/Menu.png" id="1_rpgik"]
+[ext_resource type="Script" path="res://menu.gd" id="1_w2hp5"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_shlbr"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_w2hp5")
+
+[node name="Menu-Image" type="Sprite2D" parent="."]
+position = Vector2(573.5, 326.25)
+scale = Vector2(0.832851, 0.708017)
+texture = ExtResource("1_rpgik")
+
+[node name="StartButton" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(580.125, 284.625)
+scale = Vector2(195.75, 72.75)
+texture = SubResource("PlaceholderTexture2D_shlbr")
+
+[node name="LoadButton" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(579, 366)
+scale = Vector2(195.75, 72.75)
+texture = SubResource("PlaceholderTexture2D_shlbr")
+
+[node name="CredditsButton" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(576, 446)
+scale = Vector2(207.875, 71.375)
+texture = SubResource("PlaceholderTexture2D_shlbr")
+
+[node name="SettingsButton" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(578.031, 523.156)
+scale = Vector2(243.938, 67.6875)
+texture = SubResource("PlaceholderTexture2D_shlbr")
