@@ -8,6 +8,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if handle_click($"Back-arrow"):
+		$"Back-arrow".texture = load("res://images/hoverArrow.png")
+	elif !handle_click($"Back-arrow"):
+		$"Back-arrow".texture = load("res://images/back-arrow.png")
 	if Input.is_action_just_pressed("select"):
 		if handle_click($"Back-arrow"):
 			get_tree().change_scene_to_file("res://street.tscn")
