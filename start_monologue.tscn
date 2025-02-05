@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://duogjflcy0r2w"]
+
+[ext_resource type="Script" path="res://start_monologue.gd" id="1_62ohf"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2vu6v"]
+
+[node name="StartMonologue" type="Node2D"]
+script = ExtResource("1_62ohf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(574.75, 322.25)
+scale = Vector2(1150.5, 645.5)
+texture = SubResource("PlaceholderTexture2D_2vu6v")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1149.0
+offset_bottom = 645.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "[center][/center]"

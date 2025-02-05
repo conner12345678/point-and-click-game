@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c62efwo1c7eya" path="res://images/Menu.png" id="1_rpgik"]
 [ext_resource type="Script" path="res://menu.gd" id="1_w2hp5"]
-[ext_resource type="Texture2D" path="res://images/titleScreen.png" id="3_7f2ya"]
+[ext_resource type="Texture2D" uid="uid://dd36mhg7vl7xy" path="res://images/titleScreen.png" id="3_7f2ya"]
 [ext_resource type="FontFile" uid="uid://b1nn4q0n77qfk" path="res://Bayonetta font con kerning.otf" id="4_mgc2y"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_shlbr"]

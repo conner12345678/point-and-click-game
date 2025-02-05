@@ -8,29 +8,29 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if !handle_click($"StartButton"):
-		$StartButton.modulate.a = 0
+	if !handle_click($"TitleScreen/StartButton"):
+		$TitleScreen/StartButton.modulate.a = 0
 		$TitleScreen/Start.text = "[color=white]Start[/color]"
-	elif handle_click($"StartButton"):
+	elif handle_click($"TitleScreen/StartButton"):
 		$TitleScreen/Start.text = "[color=red]Start[/color]"
-	if !handle_click($"LoadButton"):
-		$LoadButton.modulate.a = 0
+	if !handle_click($"TitleScreen/LoadButton"):
+		$TitleScreen/LoadButton.modulate.a = 0
 		$TitleScreen/Load.text = "[color=white]Load[/color]"
-	elif handle_click($"LoadButton"):
+	elif handle_click($"TitleScreen/LoadButton"):
 		$TitleScreen/Load.text = "[color=red]Load[/color]"
-	if !handle_click($"CredditsButton"):
-		$CredditsButton.modulate.a = 0
+	if !handle_click($"TitleScreen/CredditsButton"):
+		$TitleScreen/CredditsButton.modulate.a = 0
 		$TitleScreen/Credits.text = "[color=white]Credits[/color]"
-	elif handle_click($"CredditsButton"):
+	elif handle_click($"TitleScreen/CredditsButton"):
 		$TitleScreen/Credits.text = "[color=red]Credits[/color]"
-	if !handle_click($"SettingsButton"):
-		$SettingsButton.modulate.a = 0
+	if !handle_click($"TitleScreen/SettingsButton"):
+		$TitleScreen/SettingsButton.modulate.a = 0
 		$TitleScreen/Settings.text = "[color=white]Settings[/color]"
-	elif handle_click($"SettingsButton"):
+	elif handle_click($"TitleScreen/Settings"):
 		$TitleScreen/Settings.text = "[color=red]Settings[/color]"
 	if Input.is_action_just_pressed("select"):
-		if handle_click($"StartButton"):
-			get_tree().change_scene_to_file("res://office.tscn")
+		if handle_click($"TitleScreen/StartButton"):
+			get_tree().change_scene_to_file("res://start_monologue.tscn")
 
 func handle_click(item):
 	var mouse_pos = get_global_mouse_position()
