@@ -3,11 +3,15 @@ var diologue = ['hello fren']
 var j = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$"Back-arrow".modulate.a = 0
+	if Global.isOfficeDiologue:
+		$diologueBox.position = Vector2(576, 561)
 	if !Global.isOfficeDiologue:
 		$diologueBox.position = Vector2(999999, 9999999)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$officeHover.modulate.a = 0
 	if Global.isOfficeDiologue:
 		for i in diologue:
 			while j < len(i):
@@ -20,6 +24,8 @@ func _process(delta):
 				Global.isOfficeDiologue = false
 				$RichTextLabel.text = ''
 	if !Global.isOfficeDiologue:
+		if Global.isCheckBack:
+			$"Back-arrow".modulate.a = 1
 		if handle_click($"Back-arrow"):
 			$"Back-arrow".texture = load("res://images/hoverArrow.png")
 		elif !handle_click($"Back-arrow"):
@@ -27,6 +33,12 @@ func _process(delta):
 		if Input.is_action_just_pressed("select"):
 			if handle_click($"Back-arrow"):
 				get_tree().change_scene_to_file("res://street.tscn")
+			if handle_click($checkBack):
+				Global.isCheckBack = true
+		if !handle_click($officeHover):
+			$officeHover.modulate.a = 0
+		elif handle_click($officeHover):
+			$officeHover.modulate.a = 0.3
 func handle_click(item):
 	var mouse_pos = get_global_mouse_position()
 	

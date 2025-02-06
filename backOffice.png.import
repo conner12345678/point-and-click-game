@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfhfr2e3io5hh"
-path="res://.godot/imported/street.png-62f1359bfdc8ec464fe605950b593c81.ctex"
+uid="uid://bhq45n0wgruiq"
+path="res://.godot/imported/backOffice.png-6412da5bd9bce21ac828f87a22fc9f62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/street.png"
-dest_files=["res://.godot/imported/street.png-62f1359bfdc8ec464fe605950b593c81.ctex"]
+source_file="res://backOffice.png"
+dest_files=["res://.godot/imported/backOffice.png-6412da5bd9bce21ac828f87a22fc9f62.ctex"]
 
 [params]
 

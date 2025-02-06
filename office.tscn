@@ -1,30 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2jnfanosm1im"]
+[gd_scene load_steps=8 format=3 uid="uid://b2jnfanosm1im"]
 
 [ext_resource type="Script" path="res://office.gd" id="1_eujqf"]
-[ext_resource type="Texture2D" uid="uid://b27hf1ga5w3yq" path="res://images/detectives-office.png" id="2_607e6"]
 [ext_resource type="Texture2D" uid="uid://cyergqn7wi78" path="res://images/back-arrow.png" id="2_ltsga"]
+[ext_resource type="Texture2D" uid="uid://b7312dpo20a4m" path="res://images/office.png" id="2_p3nqw"]
 [ext_resource type="Script" path="res://Back-arrow.gd" id="5_i81k0"]
 [ext_resource type="FontFile" uid="uid://cg3wlrtj3mhgi" path="res://dialouge.ttf" id="5_stuv8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0sn1h"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f1qoh"]
+
 [node name="office" type="Node2D"]
 script = ExtResource("1_eujqf")
 
 [node name="officeImage" type="Sprite2D" parent="."]
-position = Vector2(578, 317)
-scale = Vector2(0.225586, 0.128125)
-texture = ExtResource("2_607e6")
+position = Vector2(577, 321.5)
+scale = Vector2(0.645089, 0.633789)
+texture = ExtResource("2_p3nqw")
 
 [node name="Back-arrow" type="Sprite2D" parent="."]
-position = Vector2(73, 352)
+position = Vector2(72, 320)
 scale = Vector2(0.455556, 0.371111)
 texture = ExtResource("2_ltsga")
 script = ExtResource("5_i81k0")
 
 [node name="diologueBox" type="Sprite2D" parent="."]
 modulate = Color(0, 0.27451, 0.00784314, 1)
-position = Vector2(576.153, 561.959)
+position = Vector2(-590, 186)
 scale = Vector2(1100, -108.344)
 texture = SubResource("PlaceholderTexture2D_0sn1h")
 
@@ -36,3 +38,16 @@ offset_bottom = 589.0
 theme_override_fonts/normal_font = ExtResource("5_stuv8")
 bbcode_enabled = true
 text = "[center][/center]"
+
+[node name="officeHover" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(335, 504)
+scale = Vector2(670, 280)
+texture = SubResource("PlaceholderTexture2D_f1qoh")
+
+[node name="checkBack" type="Sprite2D" parent="."]
+position = Vector2(1081, 325)
+rotation = 3.14159
+scale = Vector2(0.455556, 0.371111)
+texture = ExtResource("2_ltsga")
+script = ExtResource("5_i81k0")

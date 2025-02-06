@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bewsp3ws0tbtg"]
+
+[ext_resource type="Texture2D" uid="uid://bhq45n0wgruiq" path="res://backOffice.png" id="1_ydskt"]
+
+[node name="backOfOffice" type="Node2D"]
+
+[node name="BackOffice" type="Sprite2D" parent="."]
+position = Vector2(574, 323.5)
+scale = Vector2(1.125, 0.633789)
+texture = ExtResource("1_ydskt")

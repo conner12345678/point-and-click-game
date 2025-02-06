@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwaqylem3cu1f"]
+[gd_scene load_steps=5 format=3 uid="uid://dwaqylem3cu1f"]
 
-[ext_resource type="Texture2D" uid="uid://c62efwo1c7eya" path="res://images/Menu.png" id="1_rpgik"]
 [ext_resource type="Script" path="res://menu.gd" id="1_w2hp5"]
 [ext_resource type="Texture2D" uid="uid://dd36mhg7vl7xy" path="res://images/titleScreen.png" id="3_7f2ya"]
 [ext_resource type="FontFile" uid="uid://b1nn4q0n77qfk" path="res://Bayonetta font con kerning.otf" id="4_mgc2y"]
@@ -8,20 +7,18 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_shlbr"]
 
 [node name="Menu" type="Node2D"]
-position = Vector2(-1870, -655)
+position = Vector2(575, 337)
 script = ExtResource("1_w2hp5")
 
-[node name="Menu-Image" type="Sprite2D" parent="."]
-position = Vector2(573.5, 326.25)
-scale = Vector2(0.832851, 0.708017)
-texture = ExtResource("1_rpgik")
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, -13)
 
-[node name="TitleScreen" type="Sprite2D" parent="."]
-position = Vector2(2443.75, 977)
-scale = Vector2(1.54898, 1.30204)
+[node name="TitleScreen" type="Sprite2D" parent="Camera2D"]
+position = Vector2(1.00018, 4)
+scale = Vector2(1.56735, 1.34286)
 texture = ExtResource("3_7f2ya")
 
-[node name="Title" type="RichTextLabel" parent="TitleScreen"]
+[node name="Title" type="RichTextLabel" parent="Camera2D/TitleScreen"]
 offset_left = -244.516
 offset_top = -235.784
 offset_right = 223.484
@@ -29,8 +26,9 @@ offset_bottom = -161.784
 theme_override_fonts/normal_font = ExtResource("4_mgc2y")
 theme_override_font_sizes/normal_font_size = 70
 text = "Path to darkness"
+metadata/_edit_use_anchors_ = true
 
-[node name="Start" type="RichTextLabel" parent="TitleScreen"]
+[node name="Start" type="RichTextLabel" parent="Camera2D/TitleScreen"]
 offset_left = -64.3972
 offset_top = -84.4828
 offset_right = 40.6028
@@ -39,8 +37,9 @@ theme_override_fonts/normal_font = ExtResource("4_mgc2y")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Start"
+metadata/_edit_use_anchors_ = true
 
-[node name="Load" type="RichTextLabel" parent="TitleScreen"]
+[node name="Load" type="RichTextLabel" parent="Camera2D/TitleScreen"]
 offset_left = -58.587
 offset_top = -25.3448
 offset_right = 46.413
@@ -49,8 +48,9 @@ theme_override_fonts/normal_font = ExtResource("4_mgc2y")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Load"
+metadata/_edit_use_anchors_ = true
 
-[node name="Credits" type="RichTextLabel" parent="TitleScreen"]
+[node name="Credits" type="RichTextLabel" parent="Camera2D/TitleScreen"]
 offset_left = -73.0
 offset_top = 51.0
 offset_right = 59.0
@@ -59,8 +59,9 @@ theme_override_fonts/normal_font = ExtResource("4_mgc2y")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Credits"
+metadata/_edit_use_anchors_ = true
 
-[node name="Settings" type="RichTextLabel" parent="TitleScreen"]
+[node name="Settings" type="RichTextLabel" parent="Camera2D/TitleScreen"]
 offset_left = -79.2457
 offset_top = 109.06
 offset_right = 52.7543
@@ -69,31 +70,32 @@ theme_override_fonts/normal_font = ExtResource("4_mgc2y")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Settings"
+metadata/_edit_use_anchors_ = true
 
-[node name="SettingsButton" type="Sprite2D" parent="TitleScreen"]
+[node name="SettingsButton" type="Sprite2D" parent="Camera2D/TitleScreen"]
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
-position = Vector2(527, 489)
+position = Vector2(542, 498)
 scale = Vector2(180, 60)
 texture = SubResource("PlaceholderTexture2D_shlbr")
 
-[node name="CredditsButton" type="Sprite2D" parent="TitleScreen"]
+[node name="CredditsButton" type="Sprite2D" parent="Camera2D/TitleScreen"]
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
-position = Vector2(537.5, 411.656)
+position = Vector2(540, 425)
 scale = Vector2(155, 60.6874)
 texture = SubResource("PlaceholderTexture2D_shlbr")
 
-[node name="LoadButton" type="Sprite2D" parent="TitleScreen"]
+[node name="LoadButton" type="Sprite2D" parent="Camera2D/TitleScreen"]
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
-position = Vector2(541, 317)
+position = Vector2(540, 330)
 scale = Vector2(128, 64)
 texture = SubResource("PlaceholderTexture2D_shlbr")
 
-[node name="StartButton" type="Sprite2D" parent="TitleScreen"]
+[node name="StartButton" type="Sprite2D" parent="Camera2D/TitleScreen"]
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
-position = Vector2(539, 231.313)
+position = Vector2(542, 245)
 scale = Vector2(134, 61.3749)
 texture = SubResource("PlaceholderTexture2D_shlbr")
