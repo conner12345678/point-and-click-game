@@ -73,6 +73,7 @@ text = "Settings"
 metadata/_edit_use_anchors_ = true
 
 [node name="SettingsButton" type="Sprite2D" parent="Camera2D/TitleScreen"]
+visible = false
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
 position = Vector2(542, 498)
@@ -80,6 +81,7 @@ scale = Vector2(180, 60)
 texture = SubResource("PlaceholderTexture2D_shlbr")
 
 [node name="CredditsButton" type="Sprite2D" parent="Camera2D/TitleScreen"]
+visible = false
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
 position = Vector2(540, 425)
@@ -87,6 +89,7 @@ scale = Vector2(155, 60.6874)
 texture = SubResource("PlaceholderTexture2D_shlbr")
 
 [node name="LoadButton" type="Sprite2D" parent="Camera2D/TitleScreen"]
+visible = false
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
 position = Vector2(540, 330)
@@ -94,6 +97,7 @@ scale = Vector2(128, 64)
 texture = SubResource("PlaceholderTexture2D_shlbr")
 
 [node name="StartButton" type="Sprite2D" parent="Camera2D/TitleScreen"]
+visible = false
 self_modulate = Color(0, 0, 0, 1)
 top_level = true
 position = Vector2(542, 245)

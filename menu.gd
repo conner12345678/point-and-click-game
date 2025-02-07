@@ -26,7 +26,7 @@ func _process(delta):
 	if !handle_click($"Camera2D/TitleScreen/SettingsButton"):
 		$Camera2D/TitleScreen/SettingsButton.modulate.a = 0
 		$Camera2D/TitleScreen/Settings.text = "[color=white]Settings[/color]"
-	elif handle_click($"TitleScreen/SettingsButton"):
+	elif handle_click($"Camera2D/TitleScreen/SettingsButton"):
 		$Camera2D/TitleScreen/Settings.text = "[color=red]Settings[/color]"
 	if Input.is_action_just_pressed("select"):
 		if handle_click($Camera2D/TitleScreen/StartButton):
