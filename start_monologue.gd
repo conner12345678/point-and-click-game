@@ -9,7 +9,6 @@ func _ready():
 			$RichTextLabel.text += i[j]
 			j += 1
 			await get_tree().create_timer(0.1).timeout
-			$RichTextLabel.text
 		await get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://office.tscn")
 

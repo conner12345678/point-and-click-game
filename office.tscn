@@ -14,8 +14,8 @@
 script = ExtResource("1_eujqf")
 
 [node name="officeImage" type="Sprite2D" parent="."]
-position = Vector2(577, 321.5)
-scale = Vector2(0.645089, 0.633789)
+position = Vector2(577, 323.5)
+scale = Vector2(0.645089, 0.637695)
 texture = ExtResource("2_p3nqw")
 
 [node name="Back-arrow" type="Sprite2D" parent="."]
