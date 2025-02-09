@@ -1,38 +1,49 @@
 extends Node2D
-var diologue = ['hello fren', "wassup", "nerd", "wow"]
-var j = 0
-var t = 0
-var i = 0
-var dialogue_timer : Timer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$"Back-arrow".modulate.a = 0
-	if Global.isOfficeDiologue:
+	if Global.isOfficeDialogue or Global.secondOfficeDialogue:
 		$diologueBox.position = Vector2(576, 561)
-	if !Global.isOfficeDiologue:
+	if !Global.isOfficeDialogue and !Global.secondOfficeDialogue:
 		$diologueBox.position = Vector2(999999, 9999999)
-	dialogue_timer = Timer.new()
-	dialogue_timer.one_shot = true
-	add_child(dialogue_timer)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$officeHover.modulate.a = 0
-	if Global.isOfficeDiologue:
-		if i == t:
+	if Global.isOfficeDialogue and !Global.secondOfficeDialogue:
+		if Global.reset:
+			Global.officeReset()
+			Global.reset = false
+		if Global.i == Global.t:
 			# Start the dialogue showing process when ready
-			_show_dialogue()
+			Global._show_dialogue(Global.officeDialogue1, $RichTextLabel)
 		if Input.is_action_just_pressed("select"):
 			if Global.handle_click($diologueBox):
-				if i < len(diologue):
-					t += 1
-					j = 0
+				if Global.i < len(Global.officeDialogue1):
+					Global.t += 1
+					Global.j = 0
 				else:
 					$diologueBox.position = Vector2(999999, 999999)
-					Global.isOfficeDiologue = false
-					j = 99
+					Global.isOfficeDialogue = false
+					Global.j = 99
 				$RichTextLabel.text = '[center][/center]'
-	if !Global.isOfficeDiologue:
+	if !Global.isOfficeDialogue and Global.secondOfficeDialogue:
+		if Global.reset:
+			Global.officeReset()
+			Global.reset = false
+		if Global.i == Global.t:
+			Global._show_dialogue(Global.officeDialogue2, $RichTextLabel)
+		if Input.is_action_just_pressed("select"):
+			if Global.handle_click($diologueBox):
+				if Global.i < len(Global.officeDialogue2):
+					Global.t += 1
+					Global.j = 0
+				else:
+					$diologueBox.position = Vector2(99999, 99999)
+					Global.secondOfficeDialogue = false
+					Global.j = 99
+				$RichTextLabel.text = '[center][/center]'
+	if !Global.isOfficeDialogue and !Global.secondOfficeDialogue:
 		if Global.isCheckBack:
 			$"Back-arrow".modulate.a = 1
 		if Input.is_action_just_pressed("select"):
@@ -57,16 +68,3 @@ func handle_click(item):
 	
 	# Check if the mouse is within the bounding box
 	return rect.has_point(mouse_pos)
-
-func _on_dialogue_timeout():
-	_show_dialogue()
-
-func _show_dialogue():
-	if j < len(diologue[i]):
-		# Add one character to the text
-		$RichTextLabel.text += diologue[i][j]
-		j += 1
-		# Start the timer to add the next character after 0.1 seconds
-		dialogue_timer.start(0.1)
-	else:
-		i += 1

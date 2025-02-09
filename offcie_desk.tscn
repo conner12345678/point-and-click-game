@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://blccsuhqifbu7"]
+
+[ext_resource type="Texture2D" uid="uid://cjv3t4bueun5w" path="res://officeDesk.webp" id="1_fna35"]
+[ext_resource type="Texture2D" uid="uid://cuc845eodvueb" path="res://carKey.png" id="2_y52mu"]
+
+[node name="offcieDesk" type="Node2D"]
+
+[node name="desk" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+scale = Vector2(1.12305, 0.632813)
+texture = ExtResource("1_fna35")
+
+[node name="key" type="Sprite2D" parent="."]
+position = Vector2(106, 203)
+scale = Vector2(0.076504, 0.0984695)
+texture = ExtResource("2_y52mu")

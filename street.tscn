@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://street.gd" id="1_cg1gn"]
 [ext_resource type="Texture2D" uid="uid://ftxrtywoxura" path="res://images/outsideOffice.png" id="2_avmcq"]
-[ext_resource type="Texture2D" uid="uid://cp26vsbeaq4js" path="res://carAsset.png" id="3_sede5"]
+[ext_resource type="Texture2D" uid="uid://6rxtb6f5kotc" path="res://car.png" id="3_qljjq"]
 
 [node name="street" type="Node2D"]
 script = ExtResource("1_cg1gn")
@@ -13,7 +13,7 @@ scale = Vector2(1.12598, 0.634766)
 texture = ExtResource("2_avmcq")
 
 [node name="Car" type="Sprite2D" parent="."]
-position = Vector2(494, 517)
-rotation = -0.598648
-scale = Vector2(0.867845, 0.848569)
-texture = ExtResource("3_sede5")
+position = Vector2(525, 521)
+rotation = 0.120428
+scale = Vector2(0.707525, 0.634264)
+texture = ExtResource("3_qljjq")

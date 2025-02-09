@@ -23,11 +23,18 @@ func _process(delta):
 	else:
 		$cabinetHover3.modulate.a = 0
 	if Input.is_action_just_pressed("select"):
-		if Global.handle_click($HoverArrow):
-			get_tree().change_scene_to_file("res://office.tscn")
+		if Global.isFindFile == true:
+			if Global.handle_click($HoverArrow):
+				get_tree().change_scene_to_file("res://office.tscn")
 		if Global.handle_click($cabinetHover1):
 			$dialogueBox.position = Vector2(580, 580)
 			$RichTextLabel.text = nopes[0]
+		if Global.handle_click($cabinetHover2):
+			$dialogueBox.position = Vector2(580, 580)
+			$RichTextLabel.text = "[center]Ah here it is![/center]"
+			Global.isFindFile = true
+			Global.secondOfficeDialogue = true
+			Global.reset = true
 		if Global.handle_click($cabinetHover3):
 			$dialogueBox.position = Vector2(580, 580)
 			$RichTextLabel.text = nopes[1]

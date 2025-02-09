@@ -1,7 +1,17 @@
 extends Node
 
-var isOfficeDiologue = true
+var j = 0
+var t = 0
+var i = 0
+
+
+var isOfficeDialogue = true
 var isCheckBack = false
+var isFindFile = false
+var officeDialogue1 = ['hello fren', "wassup", "nerd", "wow"]
+var officeDialogue2 = ['Oh you found it!', 'Great now we can continue']
+var secondOfficeDialogue = false
+var reset = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -23,3 +33,16 @@ func handle_click(item):
 	
 	# Check if the mouse is within the bounding box
 	return rect.has_point(mouse_pos)
+
+func _show_dialogue(dialogue, textBox):
+	if j < len(dialogue[i]):
+		# Add one character to the text
+		textBox.text += dialogue[i][j]
+		j += 1
+	else:
+		i += 1
+
+func officeReset():
+	i = 0
+	j = 0
+	t = 0
