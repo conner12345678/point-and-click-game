@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2jnfanosm1im"]
+[gd_scene load_steps=9 format=3 uid="uid://b2jnfanosm1im"]
 
 [ext_resource type="Script" path="res://office.gd" id="1_eujqf"]
 [ext_resource type="Texture2D" uid="uid://cyergqn7wi78" path="res://images/back-arrow.png" id="2_ltsga"]
@@ -9,6 +9,8 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0sn1h"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f1qoh"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fpwto"]
 
 [node name="office" type="Node2D"]
 script = ExtResource("1_eujqf")
@@ -51,3 +53,15 @@ rotation = 3.14159
 scale = Vector2(0.455556, 0.371111)
 texture = ExtResource("2_ltsga")
 script = ExtResource("5_i81k0")
+
+[node name="streetArrowHover" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(71.5, 318.75)
+scale = Vector2(103, 73.5)
+texture = SubResource("PlaceholderTexture2D_fpwto")
+
+[node name="officeArrowHover" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1087, 325)
+scale = Vector2(103, 73.5)
+texture = SubResource("PlaceholderTexture2D_fpwto")

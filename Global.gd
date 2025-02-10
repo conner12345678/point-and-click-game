@@ -12,6 +12,7 @@ var officeDialogue1 = ['hello fren', "wassup", "nerd", "wow"]
 var officeDialogue2 = ['Oh you found it!', 'Great now we can continue']
 var secondOfficeDialogue = false
 var reset = true
+var isFindKey = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

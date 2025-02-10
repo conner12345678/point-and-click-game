@@ -1,6 +1,8 @@
 extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$officeArrowHover.modulate.a = 0
+	$streetArrowHover.modulate.a = 0
 	$"Back-arrow".modulate.a = 0
 	if Global.isOfficeDialogue or Global.secondOfficeDialogue:
 		$diologueBox.position = Vector2(576, 561)
@@ -46,16 +48,30 @@ func _process(delta):
 	if !Global.isOfficeDialogue and !Global.secondOfficeDialogue:
 		if Global.isCheckBack:
 			$"Back-arrow".modulate.a = 1
+			if Global.handle_click($streetArrowHover):
+				$streetArrowHover.modulate.a = 0.3
+			else:
+				$streetArrowHover.modulate.a = 0
+			if Input.is_action_just_pressed("select"):
+				if Global.handle_click($"Back-arrow"):
+					get_tree().change_scene_to_file("res://street.tscn")
+			if !Global.isFindKey:
+				if Input.is_action_just_pressed("select"):
+					if Global.handle_click($officeHover):
+						get_tree().change_scene_to_file("res://offcie_desk.tscn")
 		if Input.is_action_just_pressed("select"):
-			if Global.handle_click($"Back-arrow"):
-				get_tree().change_scene_to_file("res://street.tscn")
 			if Global.handle_click($checkBack):
 				Global.isCheckBack = true
 				get_tree().change_scene_to_file("res://back_of_office.tscn")
-		if !Global.handle_click($officeHover):
-			$officeHover.modulate.a = 0
-		elif Global.handle_click($officeHover):
-			$officeHover.modulate.a = 0.3
+		if !Global.isFindKey && Global.isFindFile:
+			if !Global.handle_click($officeHover):
+				$officeHover.modulate.a = 0
+			elif Global.handle_click($officeHover):
+				$officeHover.modulate.a = 0.3
+		if Global.handle_click($officeArrowHover):
+			$officeArrowHover.modulate.a = 0.3
+		else:
+			$officeArrowHover.modulate.a = 0
 func handle_click(item):
 	var mouse_pos = get_global_mouse_position()
 	

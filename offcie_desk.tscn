@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://blccsuhqifbu7"]
+[gd_scene load_steps=5 format=3 uid="uid://blccsuhqifbu7"]
 
+[ext_resource type="Script" path="res://offcie_desk.gd" id="1_ewe0s"]
 [ext_resource type="Texture2D" uid="uid://cjv3t4bueun5w" path="res://officeDesk.webp" id="1_fna35"]
 [ext_resource type="Texture2D" uid="uid://cuc845eodvueb" path="res://carKey.png" id="2_y52mu"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ksk4i"]
+
 [node name="offcieDesk" type="Node2D"]
+script = ExtResource("1_ewe0s")
 
 [node name="desk" type="Sprite2D" parent="."]
 position = Vector2(576, 325)
@@ -14,3 +18,9 @@ texture = ExtResource("1_fna35")
 position = Vector2(106, 203)
 scale = Vector2(0.076504, 0.0984695)
 texture = ExtResource("2_y52mu")
+
+[node name="keyHover" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(103.5, 203.125)
+scale = Vector2(89, 97.75)
+texture = SubResource("PlaceholderTexture2D_ksk4i")
