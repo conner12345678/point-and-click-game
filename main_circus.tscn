@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://2pr877gjeih8"]
+[gd_scene load_steps=4 format=3 uid="uid://2pr877gjeih8"]
 
 [ext_resource type="Texture2D" uid="uid://4wqdec0lmwmb" path="res://images/MainCircusArea.png" id="1_usfi6"]
-[ext_resource type="Texture2D" uid="uid://c82qhrpo6tjgj" path="res://images/carnivalGameTent.png" id="2_ofntv"]
+[ext_resource type="Texture2D" uid="uid://ct4vrx661heau" path="res://carnivalGameTent.png" id="2_0v5rp"]
+[ext_resource type="Texture2D" uid="uid://dpuovf7v4yo17" path="res://shootingGallary.png" id="3_mc46l"]
 
 [node name="mainCircus" type="Node2D"]
 
@@ -13,4 +14,14 @@ texture = ExtResource("1_usfi6")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.47451, 0.47451, 0.47451, 1)
 position = Vector2(892, 329)
-texture = ExtResource("2_ofntv")
+
+[node name="CarnivalGameTent" type="Sprite2D" parent="."]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+position = Vector2(851, 316)
+texture = ExtResource("2_0v5rp")
+
+[node name="ShootingGallary" type="Sprite2D" parent="."]
+modulate = Color(0.427451, 0.427451, 0.427451, 1)
+position = Vector2(326, 360)
+rotation = -0.23911
+texture = ExtResource("3_mc46l")
