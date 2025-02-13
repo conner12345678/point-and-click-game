@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://2pr877gjeih8"]
+
+[ext_resource type="Texture2D" uid="uid://4wqdec0lmwmb" path="res://images/MainCircusArea.png" id="1_usfi6"]
+[ext_resource type="Texture2D" uid="uid://c82qhrpo6tjgj" path="res://images/carnivalGameTent.png" id="2_ofntv"]
+
+[node name="mainCircus" type="Node2D"]
+
+[node name="MainCircusArea" type="Sprite2D" parent="."]
+position = Vector2(577.5, 321.5)
+scale = Vector2(1.13379, 0.635742)
+texture = ExtResource("1_usfi6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.47451, 0.47451, 0.47451, 1)
+position = Vector2(892, 329)
+texture = ExtResource("2_ofntv")
