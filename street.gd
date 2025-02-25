@@ -12,7 +12,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("select"):
 		if Global.isFindKey:
 			if Global.handle_click($"carClick"):
-				get_tree().change_scene_to_file("res://office.tscn")
+				get_tree().change_scene_to_file("res://main_circus.tscn")
 		else:
 			if Global.handle_click($carClick):
 				$dialogueBox.position = Vector2(570, 577)
